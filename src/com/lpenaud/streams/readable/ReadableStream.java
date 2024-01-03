@@ -6,9 +6,9 @@ import java.io.IOException;
 import com.lpenaud.streams.transform.TransformStream;
 import com.lpenaud.streams.writable.WritableStream;
 
-public interface ReadbleStream<T> extends Closeable {
+public interface ReadableStream<T> extends Closeable {
 
-    default <U> ReadbleStream<U> pipeThrough(final TransformStream<T, U> transformStream) throws IOException {
+    default <U> ReadableStream<U> pipeThrough(final TransformStream<T, U> transformStream) throws IOException {
         return transformStream.readableStream(this);
     }
 

@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 
 import com.lpenaud.streams.StreamsUtils;
 
-public class BytesReadableStream implements ReadbleStream<ByteBuffer> {
+public class BytesReadableStream implements ReadableStream<ByteBuffer> {
 
     private final InputStream source;
 
